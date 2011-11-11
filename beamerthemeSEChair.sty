@@ -1,0 +1,71 @@
+\usetheme{Boadilla}
+\RequirePackage{pgf}
+
+\definecolor{sered}{HTML}{990000}
+\definecolor{segray}{HTML}{333333}
+
+\usecolortheme {beaver}
+\usefonttheme {serif}
+
+\setbeamercolor{structure}{fg=sered}
+
+\pgfdeclareimage[width=1em]{se-logo}{se-logo}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]{}
+\setbeamercovered{transparent}
+\newdimen\beamer@headheight
+
+\beamer@headheight=0.10\paperwidth
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamercolor{title}{fg=sered}
+
+\setbeamercolor*{palette primary}{fg=sered}
+\setbeamercolor*{palette secondary}{fg=sered}
+\setbeamercolor*{palette tertiary}{fg=sered}
+
+\setbeamercolor{block title example}
+  {use=example text, bg=segray!20, fg=segray}
+\setbeamercolor{block title}
+  {use=structure,fg=structure.fg,bg=structure.fg!20!bg}
+\setbeamercolor{block body}
+  {parent=normal text,use=block title,bg=block title.bg!50!bg}
+
+\setbeamercolor*{Title bar}{fg=sered}
+\setbeamercolor*{frametitle}{parent=Title bar}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\setbeamertemplate{frametitle}
+{
+  \usebeamerfont*{frametitle}\insertframetitle
+}
+
+\setbeamertemplate{headline}
+{
+  \colorbox{sered}{
+    \begin{minipage}{0.93\textwidth}
+      \color{white}
+      \footnotesize{
+        ETH Z\"{u}rich \hfill Chair of Software Engineering
+      }
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{1.0\linewidth}
+      \raisebox{-0.5em}{
+        \pgfuseimage{se-logo}
+      }
+    \end{minipage}
+    \hskip 1em
+  }
+}
+
+%%% Local Variables:
+%%% TeX-master: "satsmt"
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% End:
